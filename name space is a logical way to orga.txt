@@ -1,4 +1,0 @@
-name space: is a logical way to organize our programs 
-   	     is a collection of other namespaces, classes, interfaces, events, delegates, structures, Enums etc,
- provides assistance to avoid
-
