@@ -1,0 +1,7 @@
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\bin\Debug\CC_1.exe.config
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\bin\Debug\CC_1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\bin\Debug\CC_1.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\obj\Debug\CC_1.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\obj\Debug\CC_1.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\obj\Debug\CC_1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Codechallenge\CC_1\CC_1\obj\Debug\CC_1.pdb
