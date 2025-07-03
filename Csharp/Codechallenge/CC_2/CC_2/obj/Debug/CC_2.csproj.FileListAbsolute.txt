@@ -1,0 +1,7 @@
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\bin\Debug\CC_2.exe.config
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\bin\Debug\CC_2.exe
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\bin\Debug\CC_2.pdb
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\obj\Debug\CC_2.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\obj\Debug\CC_2.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\obj\Debug\CC_2.exe
+C:\Users\shrinivasv\source\repos\CC_2\CC_2\obj\Debug\CC_2.pdb
