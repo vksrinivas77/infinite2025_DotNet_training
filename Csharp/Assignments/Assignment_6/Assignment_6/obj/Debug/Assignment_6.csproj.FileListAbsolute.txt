@@ -1,0 +1,7 @@
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\obj\Debug\Assignment_6.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\obj\Debug\Assignment_6.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

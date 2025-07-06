@@ -8,3 +8,13 @@ C:\Users\shrinivasv\source\repos\CURD_OP\CURD_OP\bin\Debug\CURD_OP.exe
 C:\Users\shrinivasv\source\repos\CURD_OP\CURD_OP\bin\Debug\CURD_OP.pdb
 C:\Users\shrinivasv\source\repos\CURD_OP\CURD_OP\obj\Debug\CURD_OP.exe
 C:\Users\shrinivasv\source\repos\CURD_OP\CURD_OP\obj\Debug\CURD_OP.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\bin\Debug\CURD_OP.exe.config
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\bin\Debug\CURD_OP.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\bin\Debug\CURD_OP.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.MainForm.resources
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.Properties.Resources.resources
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.csproj.GenerateResource.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Assignments\Assignment_4(Task_7)\CURD_OP\CURD_OP\obj\Debug\CURD_OP.pdb
