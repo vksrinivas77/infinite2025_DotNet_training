@@ -1,0 +1,7 @@
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\bin\Debug\cc_4_csharp.exe.config
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\bin\Debug\cc_4_csharp.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\bin\Debug\cc_4_csharp.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\obj\Debug\cc_4_csharp.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\obj\Debug\cc_4_csharp.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\obj\Debug\cc_4_csharp.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\Csharp\Sql_Codechallenge\cc_4_csharp\cc_4_csharp\obj\Debug\cc_4_csharp.pdb

@@ -1,7 +1,0 @@
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\bin\Debug\day3.exe.config
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\bin\Debug\day3.exe
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\bin\Debug\day3.pdb
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\obj\Debug\day3.csproj.AssemblyReference.cache
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\obj\Debug\day3.csproj.CoreCompileInputs.cache
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\obj\Debug\day3.exe
-C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\day3\day3\obj\Debug\day3.pdb
