@@ -116,13 +116,10 @@ VALUES
 	(7,'MUFFY','INDORE',24,NULL)
 
 
------------Display the Names of the Employee in lower case, whose salary is null 
+-----------Display the Names of the Employee in lower case, whose salary is null-------------- 
 SELECT LOWER(name) AS LowercaseName
 FROM Employee
 WHERE salary IS NULL
-
-
-
 
 
 
@@ -137,6 +134,8 @@ CREATE TABLE Students (
     location VARCHAR(100),
     gender CHAR(1)
 )
+
+
 -----inserting data into student table------
 INSERT INTO Students 
 VALUES 
@@ -146,6 +145,9 @@ VALUES
 (5, 'NISHA',  25, 'ME', '7834672310', 'NISHA@GMAIL.COM', 'THENI', 'F'),
 (6, 'SAISARAN',  21, 'BA', '7890345678', 'SARAN@GMAIL.COM', 'MADURAI', 'F'),
 (7, 'TOM',  23, 'BCA', '8901234675', 'TOM@GMAIL.COM', 'PUNE', 'M')
+
+
+
  
 --Write a sql server query to display the Gender,Total no of male and female from the above relation    .
  
