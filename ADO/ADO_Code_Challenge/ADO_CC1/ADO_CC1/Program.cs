@@ -8,33 +8,30 @@ namespace ADO_CC
     {
         static SqlConnection getConnection()
         {
-            SqlConnection con = new SqlConnection("Data Source=ICS-LT-1JW37V3\\SQLEXPRESS;Initial Catalog=ADO_CC;Integrated Security=true;");
+            var con = new SqlConnection("Data Source=ICS-LT-1JW37V3\\SQLEXPRESS;Initial Catalog=ADO_CC;Integrated Security=true;");
             con.Open();
             return con;
         }
 
+
+
+
+        //Test the Procedure using ADO classes and show the generated Empid and Salary
         static (int EmpId, decimal Salary) InsertEmployee(string name, decimal givenSalary, char gender)
         {
-            SqlConnection conn = null;
-            SqlCommand cmd = null;
-            try
+            using (SqlConnection conn = getConnection())
+            using (SqlCommand cmd = new SqlCommand("Insert_Employee_Details", conn))
             {
-                conn = getConnection();
-                cmd = new SqlCommand("Insert_Employee_Details", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@Name", name);
                 cmd.Parameters.AddWithValue("@GivenSalary", givenSalary);
                 cmd.Parameters.AddWithValue("@Gender", gender);
 
-                SqlParameter empIdParam = new SqlParameter("@GeneratedEmpId", SqlDbType.Int);
-                empIdParam.Direction = ParameterDirection.Output;
+                var empIdParam = new SqlParameter("@GeneratedEmpId", SqlDbType.Int) { Direction = ParameterDirection.Output };
                 cmd.Parameters.Add(empIdParam);
 
-                SqlParameter salaryParam = new SqlParameter("@CalculatedSalary", SqlDbType.Decimal);
-                salaryParam.Precision = 10;
-                salaryParam.Scale = 2;
-                salaryParam.Direction = ParameterDirection.Output;
+                var salaryParam = new SqlParameter("@CalculatedSalary", SqlDbType.Decimal) { Precision = 10, Scale = 2, Direction = ParameterDirection.Output };
                 cmd.Parameters.Add(salaryParam);
 
                 cmd.ExecuteNonQuery();
@@ -44,91 +41,57 @@ namespace ADO_CC
 
                 return (empId, salary);
             }
-            finally
-            {
-                if (cmd != null)
-                    cmd.Dispose();
-                if (conn != null)
-                {
-                    conn.Close();
-                    conn.Dispose();
-                }
-            }
         }
 
+
+
+
+        //2. Test the procedure using ADO classes and display the Employee details of that employee whose salary has been updated
         static (decimal UpdatedSalary, string Name, char Gender) UpdateSalary(int empId)
         {
-            SqlConnection conn = null;
-            SqlCommand cmd = null;
-            SqlCommand selectCmd = null;
-            SqlDataReader reader = null;
-
-            try
+            using (SqlConnection conn = getConnection())
+            using (SqlCommand cmd = new SqlCommand("UpdateSalaryByEmpId", conn))
             {
-                conn = getConnection();
-
-                cmd = new SqlCommand("UpdateSalaryByEmpId", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@EmpId", empId);
 
-                SqlParameter updatedSalaryParam = new SqlParameter("@UpdatedSalary", SqlDbType.Decimal);
-                updatedSalaryParam.Precision = 10;
-                updatedSalaryParam.Scale = 2;
-                updatedSalaryParam.Direction = ParameterDirection.Output;
+                var updatedSalaryParam = new SqlParameter("@UpdatedSalary", SqlDbType.Decimal) { Precision = 10, Scale = 2, Direction = ParameterDirection.Output };
                 cmd.Parameters.Add(updatedSalaryParam);
 
                 cmd.ExecuteNonQuery();
 
                 decimal updatedSalary = (decimal)updatedSalaryParam.Value;
 
-                selectCmd = new SqlCommand("SELECT empname, gender FROM Employee_Details WHERE empid = @EmpId", conn);
-                selectCmd.Parameters.AddWithValue("@EmpId", empId);
-
-                reader = selectCmd.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlCommand selectCmd = new SqlCommand("SELECT empname, gender FROM Employee_Details WHERE empid = @EmpId", conn))
                 {
-                    string name = reader.GetString(0);
-                    char gender = Convert.ToChar(reader.GetString(1));
-                    return (updatedSalary, name, gender);
-                }
-                else
-                {
-                    throw new Exception("Employee not found.");
-                }
-            }
-            finally
-            {
-                if (reader != null)
-                    reader.Close();
-
-                if (selectCmd != null)
-                    selectCmd.Dispose();
-
-                if (cmd != null)
-                    cmd.Dispose();
-
-                if (conn != null)
-                {
-                    conn.Close();
-                    conn.Dispose();
+                    selectCmd.Parameters.AddWithValue("@EmpId", empId);
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string name = reader.GetString(0);
+                            char gender = Convert.ToChar(reader.GetString(1));
+                            return (updatedSalary, name, gender);
+                        }
+                        else
+                        {
+                            throw new Exception("Employee not found.");
+                        }
+                    }
                 }
             }
         }
 
+
+
+     // display all employees
         static void ShowAllEmployees()
         {
-            SqlConnection conn = null;
-            SqlCommand cmd = null;
-            SqlDataReader reader = null;
-
-            try
+            using (SqlConnection conn = getConnection())
+            using (SqlCommand cmd = new SqlCommand("SELECT empid, empname, empsalary, gender FROM Employee_Details", conn))
+            using (SqlDataReader reader = cmd.ExecuteReader())
             {
-                conn = getConnection();
-                cmd = new SqlCommand("SELECT empid, empname, empsalary, gender FROM Employee_Details", conn);
-                reader = cmd.ExecuteReader();
-
                 Console.WriteLine("\n--- All Employee Details ---");
                 Console.WriteLine("EmpId\tName\t\tSalary\t\tGender");
                 Console.WriteLine("-------------------------------------------------");
@@ -143,22 +106,13 @@ namespace ADO_CC
                     Console.WriteLine($"{id}\t{empName}\t\t{salary}\t\t{gen}");
                 }
             }
-            finally
-            {
-                if (reader != null)
-                    reader.Close();
-                if (cmd != null)
-                    cmd.Dispose();
-                if (conn != null)
-                {
-                    conn.Close();
-                    conn.Dispose();
-                }
-            }
         }
+
+
 
         static void Main()
         {
+            // Insert new employee
             Console.Write("Enter Employee Name: ");
             string name = Console.ReadLine();
 
@@ -172,6 +126,7 @@ namespace ADO_CC
             var inserted = InsertEmployee(name, givenSalary, gender);
             Console.WriteLine($"\nEmployee inserted with EmpId: {inserted.EmpId}, Calculated Salary: {inserted.Salary}");
 
+            // Update salary for employee
             Console.Write("\nEnter Employee ID to increase salary by 100: ");
             int empIdToUpdate = Convert.ToInt32(Console.ReadLine());
 
@@ -186,6 +141,7 @@ namespace ADO_CC
                 Console.WriteLine("Error: " + ex.Message);
             }
 
+            // Show all employees 
             ShowAllEmployees();
 
             Console.WriteLine("\nPress any key to exit...");
