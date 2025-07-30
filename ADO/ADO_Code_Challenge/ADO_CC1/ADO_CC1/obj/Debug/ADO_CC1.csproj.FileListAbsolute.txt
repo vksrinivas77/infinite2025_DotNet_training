@@ -1,0 +1,7 @@
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\bin\Debug\ADO_CC1.exe.config
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\bin\Debug\ADO_CC1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\bin\Debug\ADO_CC1.pdb
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\obj\Debug\ADO_CC1.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\obj\Debug\ADO_CC1.csproj.CoreCompileInputs.cache
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\obj\Debug\ADO_CC1.exe
+C:\Users\shrinivasv\Documents\infinite2025_Dot_Net\ADO\ADO_Code_Challenge\ADO_CC1\ADO_CC1\obj\Debug\ADO_CC1.pdb
