@@ -125,7 +125,7 @@ namespace ADO_CC
 
             var inserted = InsertEmployee(name, givenSalary, gender);
             Console.WriteLine($"\nEmployee inserted with EmpId: {inserted.EmpId}, Calculated Salary: {inserted.Salary}");
-
+            ShowAllEmployees();
             // Update salary for employee
             Console.Write("\nEnter Employee ID to increase salary by 100: ");
             int empIdToUpdate = Convert.ToInt32(Console.ReadLine());
