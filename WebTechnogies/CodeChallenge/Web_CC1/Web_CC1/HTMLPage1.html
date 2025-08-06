@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Html and jQuery CC7 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .highlight-bg {
+            background: lightblue;
+        }
+
+        .q-section {
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+            .input-group label {
+                width: 100px;
+            }
+
+            .input-group input {
+                width: 80px;
+                padding: 5px;
+            }
+
+        button {
+            padding: 6px 12px;
+            margin-right: 6px;
+            border: 1px solid #aaa;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        .active-button {
+            background-color: #e0f4ff;
+            border: 2px solid #1c9ed9;
+            font-weight: bold;
+            color: black;
+        }
+
+        #calcResult {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #666;
+            padding: 8px 12px;
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- 1. Multiply & Divide -->
+    <div class="q-section">
+        <h3>1. Multiply & Divide</h3>
+        <div class="input-group">
+            <label>1st Number:</label>
+            <input type="number" id="num1" value="">
+        </div>
+        <div class="input-group">
+            <label>2nd Number:</label>
+            <input type="number" id="num2" value="">
+        </div>
+        <button id="multiplyBtn">Multiply</button>
+        <button id="divideBtn">Divide</button>
+        <p id="calcResult"></p>
+    </div>
+
+    <hr>
+
+    <!-- 2. Odd or Even -->
+    <div class="q-section">
+        <h3>2. Odd or Even from 0 to 15</h3>
+        <button id="showOddEven">Show Odd/Even Table</button>
+        <div id="oddEvenTblOutput" style="margin-top:12px;"></div>
+    </div>
+
+    <hr>
+
+    <!-- 3. Button Click Demo -->
+    <div class="q-section">
+        <h3>3. Button Click Demo</h3>
+        <button id="clickBtn">Click Me!</button>
+    </div>
+
+    <hr>
+
+    <!-- 4. Hide Odd Table Rows -->
+    <div class="q-section">
+        <h3>4. Hide Odd Table Rows</h3>
+        <button id="hideOddBtn">Hide Odd Rows</button>
+        <table id="sampleTable">
+            <tr><th>#</th><th>Name</th><th>Role</th></tr>
+            <tr><td>1</td><td>Aarav</td><td>Manager</td></tr>
+            <tr><td>2</td><td>Neha</td><td>Developer</td></tr>
+            <tr><td>3</td><td>Rohan</td><td>Tester</td></tr>
+            <tr><td>4</td><td>Isha</td><td>Designer</td></tr>
+            <tr><td>5</td><td>Kunal</td><td>HR</td></tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 5. h1 inside div -->
+    <div class="q-section">
+        <h3>5. h1 Elements Inside Divs</h3>
+        <div>
+            <h1>This h1 should be highlighted</h1>
+            <p>This is a paragraph</p>
+        </div>
+        <div>
+            <h1>Another highlighted h1</h1>
+        </div>
+        <h1>This h1 is NOT inside a div</h1>
+    </div>
+
+    <hr>
+
+    <!-- 6 & 7. jQuery List Selection -->
+    <div class="q-section">
+        <h3>6 & 7. List Item Actions</h3>
+        <ul id="langList">
+            <li>Python</li>
+            <li>Java</li>
+            <li>HTML</li>
+        </ul>
+        <button id="addIndexes">Add Indexes</button>
+        <button id="getSingleElement">Get Single Element</button>
+        <div id="singleOutput" style="margin-top: 10px; font-weight: bold;"></div>
+    </div>
+
+    <hr>
+
+    <!-- 8. Input Change Event -->
+    <div class="q-section">
+        <h3>8. Show Text When Input Changes</h3>
+        <input type="text" id="changeInput" placeholder="Type something...">
+        <div id="inputChangeOutput"></div>
+    </div>
+
+    <script>
+        // 1. Multiply & Divide logic
+        $('#multiplyBtn').click(function () {
+            let n1 = parseFloat($('#num1').val());
+            let n2 = parseFloat($('#num2').val());
+
+            $('#multiplyBtn').addClass('active-button');
+            $('#divideBtn').removeClass('active-button');
+
+            if (isNaN(n1) || isNaN(n2)) {
+                $('#calcResult').text('Please enter valid numbers.');
+            } else {
+                $('#calcResult').text('The Result is: ' + (n1 * n2));
+            }
+        });
+
+        $('#divideBtn').click(function () {
+            let n1 = parseFloat($('#num1').val());
+            let n2 = parseFloat($('#num2').val());
+
+            $('#divideBtn').addClass('active-button');
+            $('#multiplyBtn').removeClass('active-button');
+
+            if (isNaN(n1) || isNaN(n2)) {
+                $('#calcResult').text('Please enter valid numbers.');
+            } else if (n2 === 0) {
+                $('#calcResult').text('Cannot divide by zero!');
+            } else {
+                $('#calcResult').text('The Result is: ' + (n1 / n2));
+            }
+        });
+
+        // 2. Show Odd/Even Table
+        $('#showOddEven').click(function () {
+            let html = '<table><tr><th>Number</th><th>Type</th></tr>';
+            for (let i = 0; i <= 15; i++) {
+                html += `<tr><td>${i}</td><td>${i % 2 === 0 ? 'Even' : 'Odd'}</td></tr>`;
+            }
+            html += '</table>';
+            $('#oddEvenTblOutput').html(html);
+        });
+
+        // 3. Alert on Button Click
+        $('#clickBtn').click(function () {
+            alert('Hi Well Come To Web Technolagie!');
+            console.log('Button Clicked: Hi Well Come To Web Technolagie!');
+        });
+
+        // 4. Hide Odd Rows
+        $('#hideOddBtn').click(function () {
+            $('#sampleTable tr:odd').hide();
+        });
+
+        // 5. h1 inside div
+        $('div > h1').addClass('highlight-bg');
+
+        // 6. Get Single Element (first li)
+        $('#getSingleElement').click(function () {
+            let firstLi = $('#langList li:first').text();
+            $('#singleOutput').text('First List Item: ' + firstLi);
+            console.log('First List Item:', firstLi);
+        });
+
+        // 7. Add Index to <li>
+        $('#addIndexes').click(function () {
+            $('#langList li').each(function (index) {
+                if (!$(this).text().startsWith(index)) {
+                    $(this).prepend(index + ' - ');
+                }
+            });
+        });
+
+        // 8. Show <p> when input changes
+        $('#changeInput').on('change', function () {
+            $('#inputChangeOutput').append('<p>You typed: ' + $(this).val() + '</p>');
+        });
+    </script>
+</body>
+</html>
