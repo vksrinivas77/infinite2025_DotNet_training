@@ -1,0 +1,4 @@
+C:\Users\shrinivasv\Desktop\RV\Railway_Reservation\Unit_test_RR\obj\Debug\RailwayReservation.Tests.csproj.AssemblyReference.cache
+C:\Users\shrinivasv\Desktop\RV\Railway_Reservation\Unit_test_RR\obj\Debug\RailwayReservation.Tests.gentestingplatformentrypointinputcache.cache
+C:\Users\shrinivasv\Desktop\RV\Railway_Reservation\Unit_test_RR\obj\Debug\RailwayReservation.Tests.genautoregisteredextensionsinputcache.cache
+C:\Users\shrinivasv\Desktop\RV\Railway_Reservation\Unit_test_RR\obj\Debug\RailwayReservation.Tests.csproj.CoreCompileInputs.cache

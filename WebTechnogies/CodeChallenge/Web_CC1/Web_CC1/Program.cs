@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Web_CC1
+namespace Web_CC7
 {
     class Program
     {
