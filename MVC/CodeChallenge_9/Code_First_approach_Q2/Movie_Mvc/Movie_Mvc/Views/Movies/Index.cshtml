@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Movie_Mvc.Models.Movie>
+
+@{
+    ViewBag.Title = "Movies List";
+}
+
+<h2>Movies</h2>
+
+<p>
+    @Html.ActionLink("Add New Movie", "Create")
+</p>
+
+<!-- Filtering by Year -->
+<form method="get" action="@Url.Action("ByYear", "Movies")" style="display:inline-block;margin-right:16px;">
+    <input type="number" name="year" placeholder="Year (e.g. 2022)" required style="width:120px;" />
+    <button type="submit">Show by Year</button>
+</form>
+
+<!-- Filtering by Director -->
+<form method="get" action="@Url.Action("ByDirector", "Movies")" style="display:inline-block;">
+    <input type="text" name="directorName" placeholder="Director Name" required style="width:140px;" />
+    <button type="submit">Show by Director</button>
+</form>
+
+<table border="1" cellpadding="4" cellspacing="0" style="margin-top:16px;width:80%;">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Director</th>
+        <th>Date of Release</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Mid</td>
+            <td>@item.Moviename</td>
+            <td>@item.DirectorName</td>
+            <td>@item.DateofRelease.ToShortDateString()</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Mid })
+                |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Mid })
+            </td>
+        </tr>
+    }
+</table>
