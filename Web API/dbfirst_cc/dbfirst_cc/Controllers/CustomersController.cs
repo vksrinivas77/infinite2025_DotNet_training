@@ -1,7 +1,7 @@
-﻿using System.Data.SqlClient;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using dbfirst_cc;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace dbfirst_cc.Controllers
 {
@@ -9,7 +9,7 @@ namespace dbfirst_cc.Controllers
     {
         private northwindEntities db = new northwindEntities();
 
-        // GET api/customers/bycountry?country=USA
+        // GET api/customers/bycountry?country=?
         [HttpGet]
         [Route("api/customers/bycountry")]
         public IHttpActionResult GetCustomersByCountry(string country)
@@ -18,7 +18,6 @@ namespace dbfirst_cc.Controllers
             var customers = db.Database
                 .SqlQuery<Customer>("EXEC GetCustomersByCountry @Country", countryParam)
                 .ToList();
-
             return Ok(customers);
         }
     }
